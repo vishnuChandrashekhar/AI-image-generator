@@ -1,0 +1,220 @@
+/* importing google font - poppins */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+
+
+.image-generator{
+  height: 60vh;
+  display: flex; 
+  align-items: center;
+  position: relative;
+  justify-content: center; 
+  background: url("images/BG.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.image-generator ::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  /*width: 100%;
+  height: 100%; ----- causing the button to activate in the whole section look into this after*/
+  top: 0;
+  opacity: 5%;
+  background: #121212;
+}
+
+.image-generator .content{
+  color: white;
+  padding: 0 15px;
+  max-width: 760px;
+  text-align: center;
+}
+
+.image-generator h1{
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.image-generator p{
+  font-size: 1.35rem;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+
+.image-generator .generate-form{
+  height: 60px;
+  width: 100%;
+  display: flex;
+  padding: 6px 20px 6px;
+  margin: 45px 0 45px;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  border-radius: 40px;
+}
+
+
+.generate-form .prompt-input{
+  height: 100%;
+  width: 100%;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  background: none;
+  padding: 0 17px;
+}
+
+.generate-form .controls{
+  display: flex;
+  height: 100%;
+  gap: 15px;
+}
+
+.generate-form .img-quantity{
+  outline: none;
+  border: none;
+  background: none;
+  font-size: 1rem;
+}
+
+.generate-form .generate-button{
+  outline: none;
+  border: none;
+  background: #04d9ff;
+  color: black;
+  
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0 25px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.generate-form .generate-button:hover{
+  background: #4949e7;
+  color: #ffffff;
+  transition: 500ms;
+}
+
+.image-gallery{
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  padding: 0 15px;
+  max-width: 1440px;
+  margin: 50px auto;
+  justify-content: center;
+}
+.image-gallery .image-card{
+  width: 285px;
+  aspect-ratio: 1/1;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  background: #f2f2f2;
+}
+
+.image-gallery .image-card img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-gallery .image-card.loading img{
+  width: 80px;
+  height: 80px;
+}
+
+.image-gallery .image-card .download-btn img{
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background: #ffffff;
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-gallery .image-card:not(.loading):hover .download-btn img{
+  display: flex;
+}
+
+
+.image-gallery .image-card .download-btn img{
+  width: 20px;
+  height: 20px;
+}
+
+@media screen and (max-width : 760px) {
+  .image-generator h1 {
+    font-size: 1.8rems;
+  }
+
+  .image-generator p {  
+    font-size: 1rem;
+  }
+
+  .image-generator .generate-form{
+    margin-top: 30px;
+    height: 50px;
+    display: block;
+  }
+
+  .generate-form .controls{
+    height: 40px;
+    margin-top: 15px;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .generate-form .img-quantity{
+    color: #ffffff;
+  }
+
+  .generate-form .img-quantity option {
+    color: black;
+  }
+
+  .generate-form .generate-button{
+    height: 100%;
+  }
+
+  .image-gallery .image-card:not(.loading) .download-btn img{
+    display: flex;
+  }
+
+  .image-gallery{
+    margin-top: 20px;
+  }
+
+
+  @media screen and (max-width : 500px){
+    .image-gallery .image-card{
+      width: 100%;
+    }
+  }
+  
+
+
+
+
+
+
+}
